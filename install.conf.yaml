@@ -58,3 +58,4 @@
 
 - shell:
     - [git submodule update --init --recursive, Installing/updating submodules]
+    - [pip install --user virtualenvwrapper autoenv, Installing basic pip requirements]
