@@ -1,0 +1,60 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- clean: ['~']
+
+- link:
+    # bash
+    ~/.bashrc:
+      force: true
+      path: bashrc.conf
+    ~/.profile:
+      force: true
+      path: bash/profile.conf
+    ~/.bash_logout:
+      force: true
+      path: bash/logout.conf
+    # zsh
+    ~/.zshrc:
+      force: true
+      path: zshrc.conf
+    ~/.zshenv:
+      force: true
+      path: zsh/env.conf
+    ~/.zprofile:
+      force: true
+      path: zsh/profile.conf
+    # git
+    ~/.gitconfig: git/config
+    ~/.gitignore_global: git/gitignore_global
+    # gpg
+    ~/.gnupg/gpg.conf:
+      force: true
+      path: gnupg/gpg.conf
+    ~/.gnupg/gpg-agent.conf:
+      force: true
+      path: gnupg/gpg-agent.conf
+    # ipython
+    ~/.ipython/profile_default/ipython_config.py:
+      force: true
+      path: ipython/ipython_config.py
+    ~/.ipython/profile_default/ipython_kernel_config.py:
+      force: true
+      path: ipython/ipython_kernel_config.py
+    # python
+    ~/.config/matplotlib/matplotlibrc:
+      force: true
+      path: python/matplotlibrc.conf
+    ~/.coveragerc: python/coveragerc.conf
+    ~/.noserc: python/noserc.conf
+    # tmux
+    ~/.tmux.conf: tmux/tmux.conf
+    # virtualenvwrapper
+    ~/.virtualenvs/postmkvirtualenv:
+      force: true
+      path: virtualenvwrapper/postmkvirtualenv
+
+- shell:
+    - [git submodule update --init --recursive, Installing/updating submodules]
