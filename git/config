@@ -4,3 +4,5 @@
 	enabled = true
 [core]
 	excludesfile = ~/.gitignore_global
+[include]
+        path = ~/.gitconfig_local

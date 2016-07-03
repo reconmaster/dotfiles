@@ -10,9 +10,9 @@
 # upon a new deployment of these dotfiles. See github for examples of
 # how people do this
 
-. ~/dotfiles/zsh/config.conf
-. ~/dotfiles/zsh/aliases.conf
-#. ~/dotfiles/zsh/profile.conf
+. ~/dotfiles/zsh/config.sh
+. ~/dotfiles/zsh/aliases.sh
+#. ~/dotfiles/zsh/profile.sh
 
 # Warning (emacs): You appear to be setting environment variables
 # ("PATH") in your .bashrc or .zshrc: those files are only read by
@@ -24,4 +24,11 @@
 # Get the stuff from bash unless you need to change something that is
 # zsh specific. Arch uses profile that resets the $PATH variable if
 # set in .zshenv
-# . ~/dotfiles/bash/env.conf
+# . ~/dotfiles/bash/env.sh
+
+##################################
+# dotfiles-local
+###################################
+if [ -f ~/.zshrc_local ]; then
+    source ~/.zshrc_local
+fi

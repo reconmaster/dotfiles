@@ -1,6 +1,6 @@
 # login startup stuff
 print "Start each day with a problem to solve."
-. ~/dotfiles/bash/env.conf
+. ~/dotfiles/bash/env.sh
 
 # @bug could not get this file to source with login despite linking it
 # to .profile, sourcing directly from rc file for now.
@@ -13,3 +13,10 @@ print "Start each day with a problem to solve."
 
 # need to run this to avoid ein errors with self-signed certs
 echo insecure >> ~/.curlrc
+
+##################################
+# dotfiles-local
+###################################
+if [ -f ~/.profile_local ]; then
+    source ~/.profile_local
+fi
