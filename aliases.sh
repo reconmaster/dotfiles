@@ -36,3 +36,10 @@ alias ipy='ipython --pylab'
 
 # move multiple files
 alias mmv='noglob zmv -W'
+
+###################################
+# dotfiles-local
+###################################
+if [ -f ~/.aliases_local ]; then
+    source ~/.aliases_local
+fi

@@ -4,6 +4,6 @@
 # manager will have the incorrect PATH => emacs launched from icon
 # fail
 
-. ~/dotfiles/bash/profile
+. ~/dotfiles/bash/profile.sh
 
 # zsh specific stuff & syntax

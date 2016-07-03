@@ -1,4 +1,4 @@
-. ~/dotfiles/aliases.conf
+. ~/dotfiles/aliases.sh
 
 ######################################################################
 # Topfunky's suggested aliases, more in his adanced code file

@@ -1,6 +1,6 @@
 # This file should only contain aliases that are pertinent to zsh
 
-. ~/dotfiles/aliases
+. ~/dotfiles/aliases.sh
 
 ###################################
 # ZSH aliases
