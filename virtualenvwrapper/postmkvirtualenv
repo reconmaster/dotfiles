@@ -1,0 +1,10 @@
+#!/bin/zsh
+# This hook is sourced after a new virtualenv is activated.
+pip install ipython
+pip install ipdb
+
+# for elpy
+pip install jedi rope flake8 importmagic nose coverage yapf autopep8
+
+# without this, the status of the venv complains on arch
+pip install virtualenvwrapper autoenv

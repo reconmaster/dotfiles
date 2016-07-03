@@ -1,0 +1,58 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- clean: ['~']
+
+- link:
+    # bash
+    ~/.bashrc:
+      force: true
+      path: bashrc.sh
+    ~/.profile:
+      force: true
+      path: bash/profile.sh
+    ~/.bash_logout:
+      force: true
+      path: bash/logout.sh
+    # zsh
+    ~/.zshrc:
+      force: true
+      path: zshrc.sh
+    ~/.zshenv:
+      force: true
+      path: zsh/env.sh
+    ~/.zprofile:
+      force: true
+      path: zsh/profile.sh
+    # git
+    ~/.gitconfig: git/config
+    ~/.gitignore_global: git/gitignore_global
+    # gpg
+    ~/.gnupg/gpg-agent.conf:
+      force: true
+      path: gnupg/gpg-agent.conf
+    # ipython
+    ~/.ipython/profile_default/ipython_config.py:
+      force: true
+      path: ipython/ipython_config.py
+    ~/.ipython/profile_default/ipython_kernel_config.py:
+      force: true
+      path: ipython/ipython_kernel_config.py
+    # python
+    ~/.config/matplotlib/matplotlibrc:
+      force: true
+      path: python/matplotlibrc.conf
+    ~/.coveragerc: python/coveragerc.conf
+    ~/.noserc: python/noserc.conf
+    # tmux
+    ~/.tmux.conf: tmux/tmux.conf
+    # virtualenvwrapper
+    ~/.virtualenvs/postmkvirtualenv:
+      force: true
+      path: virtualenvwrapper/postmkvirtualenv
+
+- shell:
+    - [git submodule update --init --recursive, Installing/updating submodules]
+    - [pip install --user virtualenvwrapper autoenv, Installing basic pip requirements]
