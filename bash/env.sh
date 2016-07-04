@@ -77,3 +77,8 @@ export GRAPHVIZ_DOT="/usr/bin/dot"
 
 # ruby
 PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
+
+###################################
+# mail
+###################################
+export MAILDIR=~/.mail
