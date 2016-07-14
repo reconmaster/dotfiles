@@ -9,10 +9,13 @@ fi
 
 # Path related
 if [[ "$platform" == 'mac' ]]; then
-   export PATH=~/bin:/usr/local/sbin:$PATH
+    export PATH="$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:$PATH"
+    export PATH=~/bin:/usr/local/sbin:$PATH
+
+    export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 else
-   export PATH=~/bin:/opt/fiji:$PATH:~/.local/bin
-   export LD_LIBRARY_PATH=/opt/cuda/lib64:/opt/cuda/lib:$LD_LIBRARY_PATH
+    export PATH=~/bin:/opt/fiji:$PATH:~/.local/bin
+    export LD_LIBRARY_PATH=/opt/cuda/lib64:/opt/cuda/lib:$LD_LIBRARY_PATH
 fi
 
 # IDL
