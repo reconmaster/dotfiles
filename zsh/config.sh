@@ -277,7 +277,7 @@ case $(uname) in
         fi
   ;;
   'Darwin')
-  plugins=(brew brew-cask osx xcode autoenv battery colored-man colorize common-aliases cp dircycle dirhistory dirpersist emacs extract git git-extras gpg-agent iwhois jsontools jump pass pip python rsync screen sudo systemadmin tmux wd web-search zsh_reload)
+      plugins=(brew brew-cask osx xcode autoenv battery colored-man colorize common-aliases cp dircycle dirhistory dirpersist emacs extract git git-extras gpg-agent iwhois jsontools jump pass pip python rsync screen sudo systemadmin tmux wd web-search zsh_reload)
   ;;
 esac
 
