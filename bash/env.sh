@@ -72,6 +72,9 @@ export VISUAL=emacsclient
 
 # Emacs Environment
 
+# bibinputs
+export BIBINPUTS="~/Dropbox/bibliography/"
+
 # pdflatex
 export PDFLATEX="pdflatex --shell-escape"
 
