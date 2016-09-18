@@ -311,3 +311,8 @@ fi
 
 # Have zsh work correctly in emacs
 [[ $EMACS = t ]] && unsetopt zle
+
+######################################################################
+# osx
+######################################################################
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
