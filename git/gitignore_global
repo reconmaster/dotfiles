@@ -43,3 +43,11 @@ Thumbs.db
 *.rar
 *.tar
 *.zip
+
+# Binary #
+##########
+# *.raw
+
+# Python #
+##########
+# *.ipynb
