@@ -6,3 +6,7 @@
 	excludesfile = ~/.gitignore_global
 [include]
         path = ~/.gitconfig_local
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	required = true
+	clean = git-lfs clean -- %f
