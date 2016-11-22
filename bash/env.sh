@@ -51,11 +51,6 @@ if [[ "$platform" == 'linux' ]]; then
    export CUDA_ENABLE_COREDUMP_ON_EXCEPTION=1
 fi
 
-# System specific
-if [ "$(hostname)" = "" ]; then
-#   export PATH=$PATH:~/texlive/2013/bin/x86_64-linux
-fi
-
 # # CUDA (only linux for now)
 # if [[ "$platform" == 'linux' ]]; then
 #    # core dumps
