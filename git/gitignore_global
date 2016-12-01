@@ -13,6 +13,7 @@
 *.swp
 *~
 *#
+.tramp_history
 
 # Logs and databases #
 ######################
