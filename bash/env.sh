@@ -7,7 +7,10 @@ elif [[ "$unamestr" == 'Darwin' ]]; then
    platform='mac'
 fi
 
-# Path related
+###################################
+# PATH
+###################################
+
 if [[ "$platform" == 'mac' ]]; then
     export PATH=~/bin:/usr/local/sbin:$PATH
 else
@@ -26,16 +29,31 @@ export MATLABPATH=$MATLABPATH:~/devel/matlab
 # Anaconda
 # export PATH=~/miniconda3/bin:"$PATH"
 
+# bibinputs
+export BIBINPUTS="~/Dropbox/bibliography/"
+
+# pdflatex
+export PDFLATEX="pdflatex --shell-escape"
+
+# plantuml
+export GRAPHVIZ_DOT="/usr/bin/dot"
+
+# ruby
+PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
+
 ###################################
 # virtualenv
 ###################################
 
+# pyenv-virtual env
+# export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+
 # use the same directory for virtualenvs as virtualenvwrapper
-export PIP_VIRTUALENV_BASE=$WORKON_HOME
+# export PIP_VIRTUALENV_BASE=$WORKON_HOME
 # makes pip detect an active virtualenv and install to it
 export PIP_RESPECT_VIRTUALENV=true
 
-export WORKON_HOME=$HOME/.virtualenvs
+# export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/devel
 
 # if [[ "$platform" == 'mac' ]]; then
@@ -44,6 +62,10 @@ export PROJECT_HOME=$HOME/devel
 # else
 #    source ~/.local/bin/virtualenvwrapper.sh
 # fi
+
+###################################
+# CUDA
+###################################
 
 # CUDA (only linux for now)
 if [[ "$platform" == 'linux' ]]; then
@@ -57,24 +79,16 @@ fi
 #    export CUDA_ENABLE_COREDUMP_ON_EXCEPTION=1
 # fi
 
+###################################
+# emacs
+###################################
+
 # Editor config
 export EDITOR=emacsclient
 #export ALTERNATE_EDITOR=vim
 export VISUAL=emacsclient
 
 # Emacs Environment
-
-# bibinputs
-export BIBINPUTS="~/Dropbox/bibliography/"
-
-# pdflatex
-export PDFLATEX="pdflatex --shell-escape"
-
-# plantuml
-export GRAPHVIZ_DOT="/usr/bin/dot"
-
-# ruby
-PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 
 ###################################
 # mail
