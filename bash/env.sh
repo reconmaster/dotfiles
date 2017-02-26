@@ -24,7 +24,7 @@ export IDL_STARTUP=~/lib/idl/idlstartup.pro
 export MATLABPATH=$MATLABPATH:~/devel/matlab
 
 # Anaconda
-export PATH=~/miniconda3/bin:"$PATH"
+# export PATH=~/miniconda3/bin:"$PATH"
 
 ###################################
 # virtualenv
@@ -38,12 +38,12 @@ export PIP_RESPECT_VIRTUALENV=true
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/devel
 
-if [[ "$platform" == 'mac' ]]; then
-   export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
-   source /usr/local/bin/virtualenvwrapper.sh
-else
-   source ~/.local/bin/virtualenvwrapper.sh
-fi
+# if [[ "$platform" == 'mac' ]]; then
+#    export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
+#    source /usr/local/bin/virtualenvwrapper.sh
+# else
+#    source ~/.local/bin/virtualenvwrapper.sh
+# fi
 
 # CUDA (only linux for now)
 if [[ "$platform" == 'linux' ]]; then

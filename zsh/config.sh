@@ -269,15 +269,15 @@ ZSH_THEME="ad_candy"
 case $(uname) in
   'Linux')
         if [[ -e /etc/arch-release ]]; then
-           plugins=(archlinux aws systemd autoenv battery colored-man colorize common-aliases cp dircycle dirhistory dirpersist emacs extract git git-extras gpg-agent iwhois jsontools jump pass pip python rsync screen sudo systemadmin tmux wd web-search zsh_reload)
+           plugins=(archlinux aws systemd autoenv battery colored-man colorize common-aliases cp dircycle dirhistory dirpersist emacs extract git git-extras gpg-agent iwhois jsontools jump pass pip python pyenv rsync screen sudo systemadmin tmux wd web-search zsh_reload)
         elif [[ -e /etc/debian_version ]]; then
-           plugins=(debian autoenv aws battery colored-man colorize common-aliases cp dircycle dirhistory dirpersist emacs extract git git-extras gpg-agent iwhois jsontools jump pass pip python rsync screen sudo systemadmin tmux wd web-search zsh_reload)
+           plugins=(debian autoenv aws battery colored-man colorize common-aliases cp dircycle dirhistory dirpersist emacs extract git git-extras gpg-agent iwhois jsontools jump pass pip python pyenv rsync screen sudo systemadmin tmux wd web-search zsh_reload)
         else
-           plugins=(autoenv aws battery colored-man colorize common-aliases cp dircycle dirhistory dirpersist emacs extract git git-extras gpg-agent iwhois jsontools jump pass pip python rsync screen sudo systemadmin tmux wd web-search zsh_reload)
+           plugins=(autoenv aws battery colored-man colorize common-aliases cp dircycle dirhistory dirpersist emacs extract git git-extras gpg-agent iwhois jsontools jump pass pip python pyenv rsync screen sudo systemadmin tmux wd web-search zsh_reload)
         fi
   ;;
   'Darwin')
-      plugins=(aws brew brew-cask osx xcode autoenv battery colored-man colorize common-aliases cp dircycle dirhistory dirpersist emacs extract git git-extras gpg-agent iwhois jsontools jump pass pip python rsync screen sudo systemadmin tmux wd web-search zsh_reload)
+      plugins=(aws brew brew-cask osx xcode autoenv battery colored-man colorize common-aliases cp dircycle dirhistory dirpersist emacs extract git git-extras gpg-agent iwhois jsontools jump pass pip python pyenv rsync screen sudo systemadmin tmux wd web-search zsh_reload)
   ;;
 esac
 
