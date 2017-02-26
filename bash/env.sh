@@ -23,8 +23,8 @@ export IDL_STARTUP=~/lib/idl/idlstartup.pro
 # export MATLABPATH=$MATLABPATH:~/lib/matlab:~/lib/matlab/linac:~/lib/matlab/export_fig:~/lib/matlab/matlab2tikz/src
 export MATLABPATH=$MATLABPATH:~/devel/matlab
 
-# Python
-#export PYTHONPATH=~/lib/python
+# Anaconda
+export PATH=~/miniconda3/bin:"$PATH"
 
 ###################################
 # virtualenv
