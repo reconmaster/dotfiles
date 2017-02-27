@@ -53,7 +53,7 @@ PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 # makes pip detect an active virtualenv and install to it
 export PIP_RESPECT_VIRTUALENV=true
 
-# export WORKON_HOME=$HOME/.virtualenvs
+export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/devel
 
 # if [[ "$platform" == 'mac' ]]; then
