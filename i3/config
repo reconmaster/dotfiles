@@ -46,14 +46,15 @@ bindsym $sup+d exec --no-startup-id j4-dmenu-desktop
 # lock
 bindsym $mod+$sup+l exec i3lock
 
+###################################
+# navigation
+###################################
+
 # change focus
 bindsym $sup+j focus left
 bindsym $sup+k focus down
 bindsym $sup+l focus up
 bindsym $sup+semicolon focus right
-
-# jump to urgent
-bindsym $sup+x [urgent=latest] focus
 
 # alternatively, you can use the cursor keys:
 bindsym $sup+Left focus left
@@ -100,28 +101,84 @@ bindsym $sup+a focus parent
 #bindsym $sup+d focus child
 
 # switch to workspace
-bindsym $sup+1 workspace 1
-bindsym $sup+2 workspace 2
-bindsym $sup+3 workspace 3
-bindsym $sup+4 workspace 4
-bindsym $sup+5 workspace 5
-bindsym $sup+6 workspace 6
-bindsym $sup+7 workspace 7
-bindsym $sup+8 workspace 8
-bindsym $sup+9 workspace 9
-bindsym $sup+0 workspace 10
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10
 
 # move focused container to workspace
-bindsym $sup+Shift+1 move container to workspace 1
-bindsym $sup+Shift+2 move container to workspace 2
-bindsym $sup+Shift+3 move container to workspace 3
-bindsym $sup+Shift+4 move container to workspace 4
-bindsym $sup+Shift+5 move container to workspace 5
-bindsym $sup+Shift+6 move container to workspace 6
-bindsym $sup+Shift+7 move container to workspace 7
-bindsym $sup+Shift+8 move container to workspace 8
-bindsym $sup+Shift+9 move container to workspace 9
-bindsym $sup+Shift+0 move container to workspace 10
+bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+6 move container to workspace 6
+bindsym $mod+Shift+7 move container to workspace 7
+bindsym $mod+Shift+8 move container to workspace 8
+bindsym $mod+Shift+9 move container to workspace 9
+bindsym $mod+Shift+0 move container to workspace 10
+
+# jump to urgent
+bindsym $sup+x [urgent=latest] focus
+
+# jump back
+workspace_auto_back_and_forth yes
+
+# bindsym $sup+z workspace back_and_forth
+bindsym $sup+z workspace back_and_forth
+bindsym $sup+Shift+z move container to workspace back_and_forth
+
+# alt+tab cycles workspaces
+bindsym $mod+Tab workspace next
+bindsym $mod+Shift+Tab workspace prev
+
+# favorite apps
+bindsym $mod+$sup+b [class="Firefox"] focus
+bindsym $mod+$sup+e [class="Emacs"] focus
+
+# focused mode
+# http://www.slackword.net/?p=657
+# mode "focused" {
+
+#      # hardcoded focus keybindings
+#      bindsym b [class="(?i)firefox"] focus
+#      bindsym e [class="(?i)emacs"] focus
+#      # bindsym f [class="(?i)terminal" title="mc"] focus
+
+#      # keybindings for marking and jumping to clients
+#      bindsym a exec i3-input -F 'mark %s' -P 'Mark name: '
+#      bindsym g exec i3-input -F '[con_mark=%s] focus' -P 'Go to mark: '
+
+#      # Assign marks to keys 1-5
+#      bindsym Shift+1 mark mark1
+#      bindsym Shift+2 mark mark2
+#      bindsym Shift+3 mark mark3
+#      bindsym Shift+4 mark mark4
+#      bindsym Shift+5 mark mark5
+
+#      # Jump to clients marked 1-5
+#      bindsym 1 [con_mark="mark1"] focus
+#      bindsym 2 [con_mark="mark2"] focus
+#      bindsym 3 [con_mark="mark3"] focus
+#      bindsym 4 [con_mark="mark4"] focus
+#      bindsym 5 [con_mark="mark5"] focus
+
+#      # Exit to the default mode
+#      bindsym Return mode "default"
+#      bindsym Escape mode "default"
+# }
+
+# bindsym $mod+n mode "focused"
+
+###################################
+# customization tools
+###################################
 
 # reload the configuration file
 bindsym $sup+Shift+c reload
@@ -181,6 +238,7 @@ exec --no-startup-id nm-applet
 
 # wallpaper
 # exec --no-startup-id nitrogen --restore
+exec --no-startup-id variety
 
 # layouts
 exec --no-startup-id i3-msg 'workspace 4:Web; exec /usr/bin/firefox'
