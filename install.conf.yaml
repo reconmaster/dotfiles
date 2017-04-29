@@ -52,10 +52,10 @@
     ~/.noserc: python/noserc.conf
     # tmux
     ~/.tmux.conf: tmux/tmux.conf
-    # virtualenvwrapper
-    # ~/.virtualenvs/postmkvirtualenv:
-    #   force: true
-    #   path: virtualenvwrapper/postmkvirtualenv
+    # X
+    ~/.Xdefaults:
+      force: true
+      path: X/resources.conf
 
 - shell:
     - [git submodule update --init --recursive, Installing/updating submodules]
