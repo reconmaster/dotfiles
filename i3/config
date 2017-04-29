@@ -43,11 +43,17 @@ bindsym $sup+Shift+q kill
 # installed.
 bindsym $sup+d exec --no-startup-id j4-dmenu-desktop
 
+# lock
+bindsym $mod+$sup+l exec i3lock
+
 # change focus
 bindsym $sup+j focus left
 bindsym $sup+k focus down
 bindsym $sup+l focus up
 bindsym $sup+semicolon focus right
+
+# jump to urgent
+bindsym $sup+x [urgent=latest] focus
 
 # alternatively, you can use the cursor keys:
 bindsym $sup+Left focus left
@@ -152,13 +158,43 @@ bindsym $sup+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-# bar {
-#         status_command i3status
-# }
 
 bar {
-    font pango:DejaVu Sans Mono 8
-    position top
-    tray_output none
-    status_command bumblebee-status -m nic disk:root cpu memory battery date time pasink pasource dnf -p root.path=/ time.format="%H:%M CW %V" date.format="%a, %b %d %Y" -t gruvbox-powerline
+        status_command i3status
 }
+
+# bar {
+#     font pango:DejaVu Sans Mono 8
+#     position top
+#     tray_output none
+#     status_command bumblebee-status -m nic disk:root cpu memory battery date time pasink pasource dnf -p root.path=/ time.format="%H:%M CW %V" date.format="%a, %b %d %Y" -t gruvbox-powerline
+# }
+
+# use another panel
+# exec --no-startup-id xfce4-panel --disable-wm-check
+
+###################################
+# auto start
+###################################
+# network manager
+exec --no-startup-id nm-applet
+
+# wallpaper
+# exec --no-startup-id nitrogen --restore
+
+# layouts
+exec --no-startup-id i3-msg 'workspace 4:Web; exec /usr/bin/firefox'
+
+###################################
+# security
+###################################
+# lock
+# bindsym $mod+$sup+l exec i3lock
+
+# autolock
+# xautolock -time 10 -locker "i3lock -i 'background_image.png'" &
+
+###################################
+# windows management
+###################################
+# for_window [class="(Fiji Is Just) ImageJ"] floating enable, border none
