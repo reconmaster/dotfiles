@@ -269,12 +269,12 @@ bar {
 #     status_command bumblebee-status -m nic disk:root cpu memory battery date time pasink pasource dnf -p root.path=/ time.format="%H:%M CW %V" date.format="%a, %b %d %Y" -t gruvbox-powerline
 # }
 
-bar {
-    font pango:DejaVu Sans Mono 8
-    position top
-    tray_output none
-    status_command bumblebee-status -m nic disk:root cpu memory battery date time pasink pasource dnf -p root.path=/ time.format="%H:%M CW %V" date.format="%a, %b %d %Y" -t gruvbox-powerline
-}
+# bar {
+#     font pango:DejaVu Sans Mono 8
+#     position top
+#     tray_output none
+#     status_command bumblebee-status -m nic disk:root cpu memory battery date time pasink pasource dnf -p root.path=/ time.format="%H:%M CW %V" date.format="%a, %b %d %Y" -t gruvbox-powerline
+# }
 
 ###################################
 # windows management
@@ -283,7 +283,6 @@ for_window [class="fiji-Main"] floating enable
 for_window [class="Google-chrome"] floating enable
 for_window [class="Pidgin"] floating enable
 for_window [class="Remmina"] floating enable
-for_window [class="Seafile Client"] floating enable
 
 # for_window [class="fullscreen"] fullscreen enable
 
@@ -300,15 +299,8 @@ exec firefox
 # network manager
 exec --no-startup-id nm-applet
 
-# seafile
-exec seafile-applet
-
 # terminal
 exec --no-startup-id i3-msg 'workspace $workspace3; exec urxvt; workspace $workspace1'
-
-# wallpaper
-# exec --no-startup-id nitrogen --restore
-exec --no-startup-id variety
 
 # emacs
 exec --no-startup-id i3-msg 'workspace $workspace2; exec  emacsclient -c -a ""'
