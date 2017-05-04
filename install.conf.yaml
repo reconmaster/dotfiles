@@ -34,6 +34,12 @@
       force: true
       path: gnupg/gpg-agent.conf
     # i3
+    ~/bin/i3:
+      force: true
+      path: i3/i3.sh
+    ~/.config/i3/config.base:
+      force: true
+      path: i3/config
     ~/.config/i3/config:
       force: true
       path: i3/config
@@ -53,9 +59,15 @@
     # tmux
     ~/.tmux.conf: tmux/tmux.conf
     # X
-    ~/.Xdefaults:
+    ~/.xprofile:
+      force: true
+      path: X/profile.sh
+    ~/.Xresources:
       force: true
       path: X/resources.conf
+    ~/.Xresources.d/rxvt-unicode:
+      force: true
+      path: X/urxvt.conf
 
 - shell:
     - [git submodule update --init --recursive, Installing/updating submodules]
