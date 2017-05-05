@@ -166,6 +166,10 @@ assign [class="Zotero"] $workspace5
 # analysis
 assign [class="fiji-Main"] $workspace6
 
+# media
+assign [class="Eog"] $workspace10
+assign [class="Vlc"] $workspace10
+
 ###################################
 # navigation
 ###################################
@@ -283,6 +287,10 @@ for_window [class="fiji-Main"] floating enable
 for_window [class="Google-chrome"] floating enable
 for_window [class="Pidgin"] floating enable
 for_window [class="Remmina"] floating enable
+for_window [class="XEyes"] floating enable
+
+# ipy windows
+for_window [class=" "] floating enable
 
 # for_window [class="fullscreen"] fullscreen enable
 
