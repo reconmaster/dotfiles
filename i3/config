@@ -45,8 +45,8 @@ bindsym $sup+Shift+q kill
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
-bindsym $sup+d exec --no-startup-id j4-dmenu-desktop
-bindsym $mod+$sup+d exec --no-startup-id synapse
+# bindsym $sup+d exec --no-startup-id j4-dmenu-desktop
+bindsym $sup+d exec --no-startup-id synapse
 
 # favorite apps
 bindsym $mod+$sup+e exec emacsclient -c -a ""
@@ -113,14 +113,14 @@ bindsym $sup+a focus parent
 # icons http://fontawesome.io/cheatsheet/
 set $workspace1 "1:  General"
 set $workspace2 "2:  Emacs"
-set $workspace3 "3:  Terms"
+set $workspace3 "3:  Terms"
 set $workspace4 "4:  Browser"
 set $workspace5 "5:  Research"
 set $workspace6 "6:  Analysis"
-set $workspace7 "7:  Remotes"
-set $workspace8 "8: "
-set $workspace9 "9: "
-set $workspace10 "10:  Media"
+set $workspace7 "7:  Docs"
+set $workspace8 "8:  Remotes"
+set $workspace9 "9:  Media"
+set $workspace10 "10:  System"
 
 # switch to workspace
 bindsym $mod+1 workspace $workspace1
@@ -150,7 +150,6 @@ bindsym $sup+0 move container to workspace $workspace10
 
 # general
 assign [class="Google-chrome"] $workspace1
-assign [class="Seafile Client"] $workspace1
 
 # assign [class="Emacs"] $workspace2
 
@@ -166,9 +165,17 @@ assign [class="Zotero"] $workspace5
 # analysis
 assign [class="fiji-Main"] $workspace6
 
+# documents
+assign [class="libreoffice-writer"] $workspace7
+
+# remotes
+assign [class="Remmina"] $workspace8
+
 # media
-assign [class="Eog"] $workspace10
-assign [class="Vlc"] $workspace10
+assign [class="Eog"] $workspace9
+assign [class="Vlc"] $workspace9
+
+# system
 
 ###################################
 # navigation
