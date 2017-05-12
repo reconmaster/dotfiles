@@ -294,10 +294,10 @@ set $base0E #b294bb
 set $base0F #a3685a
 
 # Window Colours            border  background  text    indicator
-client.focused              $base0D $base0D     $base00 $base01
-client.focused_inactive     $base02 $base02     $base03 $base01
-client.unfocused            $base01 $base01     $base03 $base01
-client.urgent               $base02 $base08     $base07 $base08
+client.focused              $base02 $base02     $base05 $base01
+client.focused_inactive     $base01 $base01     $base02 $base01
+client.unfocused            $base00 $base00     $base02 $base01
+client.urgent               $base08 $base08     $base07 $base08
 
 ## remember to add the rest of your configuration
 
@@ -306,7 +306,7 @@ bar {
         status_command i3pystatus -c ~/.config/i3/i3pystatus.py
 
         colors {
-        separator   $base03
+        separator   $base01
         background  $base01
         statusline  $base05
 

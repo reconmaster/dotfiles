@@ -26,6 +26,10 @@
     ~/.zprofile:
       force: true
       path: zsh/profile.sh
+    # dunst
+    ~/.config/dunst/dunstrc:
+      force: true
+      path: X/dunstrc.conf
     # git
     ~/.gitconfig:
       force: true
