@@ -20,3 +20,10 @@ echo insecure >> ~/.curlrc
 if [ -f ~/.profile_local ]; then
     source ~/.profile_local
 fi
+
+###################################
+# startx
+###################################
+if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ]; then
+  exec startx
+fi
