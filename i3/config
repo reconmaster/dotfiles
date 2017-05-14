@@ -172,6 +172,7 @@ assign [class="libreoffice-writer"] $workspace7
 assign [class="Remmina"] $workspace8
 
 # media
+assign [class="digikam"] $workspace9
 assign [class="Eog"] $workspace9
 assign [class="Vlc"] $workspace9
 
@@ -349,8 +350,8 @@ exec firefox
 # network manager
 exec --no-startup-id nm-applet
 
-# pidgin
-exec --no-startup-id i3-msg 'workspace $workspace1; exec pidgin; workspace $workspace1'
+# # pidgin
+# exec --no-startup-id i3-msg 'workspace $workspace1; exec pidgin; workspace $workspace1'
 
 # terminal
 exec --no-startup-id i3-msg 'workspace $workspace3; exec urxvt; workspace $workspace1'
@@ -367,4 +368,4 @@ exec --no-startup-id variety
 ###################################
 # lock
 # bindsym $mod+$sup+l exec i3lock
-bindsym $mod+$sup+l exec i3lock --color $base0D
+bindsym $mod+$sup+l exec i3lock
