@@ -295,8 +295,8 @@ set $base0F #a3685a
 
 # Window Colours            border  background  text    indicator
 client.focused              $base02 $base02     $base05 $base01
-client.focused_inactive     $base01 $base01     $base02 $base01
-client.unfocused            $base00 $base00     $base02 $base01
+client.focused_inactive     $base01 $base01     $base04 $base01
+client.unfocused            $base00 $base00     $base03 $base01
 client.urgent               $base08 $base08     $base07 $base08
 
 ## remember to add the rest of your configuration
@@ -328,6 +328,7 @@ for_window [class="fiji-Main"] floating enable
 for_window [class="Google-chrome"] floating enable
 for_window [class="Pidgin"] floating enable
 for_window [class="Remmina"] floating enable
+for_window [class="Variety"] floating enable
 for_window [class="XEyes"] floating enable
 
 # ipy windows
@@ -348,12 +349,18 @@ exec firefox
 # network manager
 exec --no-startup-id nm-applet
 
+# pidgin
+exec --no-startup-id i3-msg 'workspace $workspace1; exec pidgin; workspace $workspace1'
+
 # terminal
 exec --no-startup-id i3-msg 'workspace $workspace3; exec urxvt; workspace $workspace1'
 
 # emacs
-exec --no-startup-id i3-msg 'workspace $workspace2; exec  emacsclient -c -a ""'
+exec --no-startup-id i3-msg 'workspace $workspace2; exec  emacsclient -c -a ""; $workspace2'
 # exec emacsclient -c -a ""
+
+# variety
+exec --no-startup-id variety
 
 ###################################
 # security
