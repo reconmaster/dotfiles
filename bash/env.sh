@@ -29,9 +29,6 @@ export MATLABPATH=$MATLABPATH:~/devel/matlab
 # Anaconda
 # export PATH=~/miniconda3/bin:"$PATH"
 
-# bibinputs
-export BIBINPUTS="~/Dropbox/bibliography/"
-
 # pdflatex
 export PDFLATEX="pdflatex --shell-escape"
 
@@ -94,3 +91,8 @@ export VISUAL=emacsclient
 # mail
 ###################################
 export MAILDIR=~/.mail
+
+###################################
+# music
+###################################
+# export XDG_MUSIC_DIR=~/music

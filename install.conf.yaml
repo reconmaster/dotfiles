@@ -72,13 +72,6 @@
     ~/bin/ipdb:
       force: true
       path: ipython/scripts/ipdb.sh
-    # music
-    ~/.config/beets/config.yaml:
-      force: true
-      path: music/beets.yaml
-    ~/.config/mopidy/mopidy.conf:
-      force: true
-      path: music/mopidy.conf
     # python
     ~/.coveragerc: python/coveragerc.conf
     ~/.noserc: python/noserc.conf
