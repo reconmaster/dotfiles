@@ -30,6 +30,10 @@
     ~/.config/dunst/dunstrc:
       force: true
       path: X/dunstrc.conf
+    # emacs
+    ~/bin/mailto_emacs:
+      force: true
+      path: emacs/mailto_emacs.sh
     # git
     ~/.gitconfig:
       force: true
@@ -68,6 +72,13 @@
     ~/bin/ipdb:
       force: true
       path: ipython/scripts/ipdb.sh
+    # music
+    ~/.config/beets/config.yaml:
+      force: true
+      path: music/beets.yaml
+    ~/.config/mopidy/mopidy.conf:
+      force: true
+      path: music/mopidy.conf
     # python
     ~/.coveragerc: python/coveragerc.conf
     ~/.noserc: python/noserc.conf
