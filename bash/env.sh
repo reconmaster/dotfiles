@@ -18,6 +18,9 @@ else
     export LD_LIBRARY_PATH=/opt/cuda/lib64:/opt/cuda/lib:$LD_LIBRARY_PATH
 fi
 
+# bibinputs
+export BIBINPUTS="~/Dropbox/bibliography/"
+
 # IDL
 #export IDL_PATH=+~/lib/idl:$IDL_PATH
 export IDL_STARTUP=~/lib/idl/idlstartup.pro

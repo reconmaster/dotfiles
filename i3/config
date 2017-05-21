@@ -175,6 +175,7 @@ assign [class="Remmina"] $workspace8
 assign [class="digikam"] $workspace9
 assign [class="Eog"] $workspace9
 assign [class="Gimp-2.8"] $workspace9
+assign [class="PhotoQt"] $workspace9
 assign [class="Vlc"] $workspace9
 
 # system
