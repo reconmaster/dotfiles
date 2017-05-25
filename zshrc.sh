@@ -1,4 +1,4 @@
-# Symlink to this file from ~/.zshrc
+# symlink to this file from ~/.zshrc
 # You should also symlink ~/.zshenv to zsh/env in this directory
 
 # Also symlink ~/.zprofile to zsh/profile

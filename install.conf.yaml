@@ -26,6 +26,10 @@
     ~/.zprofile:
       force: true
       path: zsh/profile.sh
+    # asy
+    ~/.asy/config.asy:
+      force: true
+      path: asy/config.asy
     # dunst
     ~/.config/dunst/dunstrc:
       force: true
@@ -94,4 +98,4 @@
 - shell:
     - [git submodule update --init --recursive, Installing/updating submodules]
     - [pip install --user autoenv flake8 jedi, Installing basic pip requirements]
-    - [curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash, Installing pyenv]
+    # - [curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash, Installing pyenv]
