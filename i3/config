@@ -354,8 +354,8 @@ exec firefox
 # network manager
 exec --no-startup-id nm-applet
 
-# # pidgin
-# exec --no-startup-id i3-msg 'workspace $workspace1; exec pidgin; workspace $workspace1'
+# pidgin
+exec --no-startup-id i3-msg 'workspace $workspace1; exec pidgin; workspace $workspace1'
 
 # terminal
 exec --no-startup-id i3-msg 'workspace $workspace3; exec urxvt; workspace $workspace1'
@@ -372,4 +372,6 @@ exec --no-startup-id variety
 ###################################
 # lock
 # bindsym $mod+$sup+l exec i3lock
+
+# bindsym --release $mod+$sup+l exec i3lock-fancy -df DejaVu-Sans -- scrot -z
 bindsym --release $mod+$sup+l exec i3lock-fancy
