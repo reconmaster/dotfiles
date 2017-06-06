@@ -26,10 +26,6 @@
     ~/.zprofile:
       force: true
       path: zsh/profile.sh
-    # asy
-    ~/.asy/config.asy:
-      force: true
-      path: asy/config.asy
     # dunst
     ~/.config/dunst/dunstrc:
       force: true
