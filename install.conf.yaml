@@ -77,19 +77,6 @@
     ~/.noserc: python/noserc.conf
     # tmux
     ~/.tmux.conf: tmux/tmux.conf
-    # X
-    ~/.xinitrc:
-      force: true
-      path: X/initrc.conf
-    ~/.xprofile:
-      force: true
-      path: X/profile.sh
-    ~/.Xresources:
-      force: true
-      path: X/resources.conf
-    ~/.Xresources.d/rxvt-unicode:
-      force: true
-      path: X/urxvt.conf
 
 - shell:
     - [git submodule update --init --recursive, Installing/updating submodules]
