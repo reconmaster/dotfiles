@@ -26,10 +26,6 @@
     ~/.zprofile:
       force: true
       path: zsh/profile.sh
-    # dunst
-    ~/.config/dunst/dunstrc:
-      force: true
-      path: X/dunstrc.conf
     # emacs
     ~/bin/mailto_emacs:
       force: true
@@ -41,13 +37,6 @@
     ~/.gitignore_global:
       force: true
       path: git/gitignore_global
-    # gtk
-    ~/.gtkrc-2.0.mine:
-      force: true
-      path: X/gtk/gtkrc-2.0.conf
-    ~/.config/gtk-3.0/gtk.css:
-      force: ture
-      path: X/gtk/gtk-3.0.css
     # gpg
     ~/.gnupg/gpg-agent.conf:
       force: true
