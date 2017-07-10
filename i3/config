@@ -330,6 +330,7 @@ bindsym $sup+Shift+s sticky toggle
 for_window [class="fiji-Main"] floating enable
 for_window [class="Gimp-2.8"] floating enable
 for_window [class="Google-chrome"] floating enable
+for_window [class="KeePass2"] floating enable
 for_window [class="Pidgin"] floating enable
 for_window [class="Remmina"] floating enable
 for_window [class="showfoto"] floating enable
