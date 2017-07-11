@@ -11,3 +11,6 @@
 if [ "$SHLVL" = 1 ]; then
     [ -x /usr/bin/clear_console ] && /usr/bin/clear_console -q
 fi
+
+# dump ssh
+kill $SSH_AGENT_PID

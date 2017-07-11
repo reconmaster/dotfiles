@@ -12,11 +12,18 @@ print "Start each day with a problem to solve."
 # fi
 
 # need to run this to avoid ein errors with self-signed certs
-echo insecure >> ~/.curlrc
+echo insecure > ~/.curlrc
 
 ##################################
 # dotfiles-local
 ###################################
 if [ -f ~/.profile_local ]; then
     source ~/.profile_local
+fi
+
+###################################
+# startx
+###################################
+if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ]; then
+  exec startx
 fi
