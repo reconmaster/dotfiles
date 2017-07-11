@@ -179,6 +179,8 @@ assign [class="PhotoQt"] $workspace9
 assign [class="Vlc"] $workspace9
 
 # system
+assign [class="KeePass2"] $workspace10
+assign [class="Syncthing GTK"] $workspace10
 
 ###################################
 # navigation
