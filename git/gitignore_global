@@ -13,6 +13,9 @@
 *.swp
 *~
 *#
+.tramp_history
+auto/
+frag-master.tex
 
 # Logs and databases #
 ######################
@@ -43,3 +46,11 @@ Thumbs.db
 *.rar
 *.tar
 *.zip
+
+# Binary #
+##########
+# *.raw
+
+# Python #
+##########
+# *.ipynb

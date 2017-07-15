@@ -269,15 +269,15 @@ ZSH_THEME="ad_candy"
 case $(uname) in
   'Linux')
         if [[ -e /etc/arch-release ]]; then
-           plugins=(archlinux systemd autoenv battery colored-man colorize common-aliases cp dircycle dirhistory dirpersist emacs extract git git-extras gpg-agent iwhois jsontools jump pass pip python rsync screen sudo systemadmin tmux wd web-search zsh_reload)
+           plugins=(archlinux aws systemd autoenv battery colored-man colorize common-aliases cp dircycle dirhistory dirpersist emacs extract git git-extras iwhois jsontools jump pass pip python pyenv rsync screen sudo systemadmin tmux wd web-search zsh_reload)
         elif [[ -e /etc/debian_version ]]; then
-           plugins=(debian autoenv battery colored-man colorize common-aliases cp dircycle dirhistory dirpersist emacs extract git git-extras gpg-agent iwhois jsontools jump pass pip python rsync screen sudo systemadmin tmux wd web-search zsh_reload)
+           plugins=(debian autoenv aws battery colored-man colorize common-aliases cp dircycle dirhistory dirpersist emacs extract git git-extras gpg-agent iwhois jsontools jump pass pip python pyenv rsync screen sudo systemadmin tmux wd web-search zsh_reload)
         else
-           plugins=(autoenv battery colored-man colorize common-aliases cp dircycle dirhistory dirpersist emacs extract git git-extras gpg-agent iwhois jsontools jump pass pip python rsync screen sudo systemadmin tmux wd web-search zsh_reload)
+           plugins=(autoenv aws battery colored-man colorize common-aliases cp dircycle dirhistory dirpersist emacs extract git git-extras gpg-agent iwhois jsontools jump pass pip python pyenv rsync screen sudo systemadmin tmux wd web-search zsh_reload)
         fi
   ;;
   'Darwin')
-  plugins=(brew brew-cask osx xcode autoenv battery colored-man colorize common-aliases cp dircycle dirhistory dirpersist emacs extract git git-extras gpg-agent iwhois jsontools jump pass pip python rsync screen sudo systemadmin tmux wd web-search zsh_reload)
+      plugins=(aws brew brew-cask osx xcode autoenv battery colored-man colorize common-aliases cp dircycle dirhistory dirpersist emacs extract git git-extras gpg-agent iwhois jsontools jump pass pip python pyenv rsync screen sudo systemadmin tmux wd web-search zsh_reload)
   ;;
 esac
 
@@ -311,3 +311,13 @@ fi
 
 # Have zsh work correctly in emacs
 [[ $EMACS = t ]] && unsetopt zle
+
+######################################################################
+# osx
+######################################################################
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+###################################
+# direnv
+###################################
+eval "$(direnv hook zsh)"
