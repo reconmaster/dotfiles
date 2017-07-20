@@ -6,7 +6,6 @@ import os.path
 
 from i3pystatus import Status
 # from i3pystatus.updates import pacman, cower
-from i3pystatus.weather import weathercom
 
 status = Status()
 
@@ -49,10 +48,10 @@ status.register("clock",
                 interval=1,)
 
 # weather
+from i3pystatus.weather import weathercom
 status.register(
     'weather',
-    # format='{condition} {current_temp}{temp_unit}[ {icon}] [ Hi: {high_temp}][ Lo: {low_temp}]',
-    format='{condition} {current_temp}{temp_unit}[ {icon}] [ Hi: {high_temp}][ Lo: {low_temp}]',
+    format='{condition} {current_temp}{temp_unit}[ {icon}] [ Hi: {high_temp}][ Lo: {low_temp}][  {uv_index}]',
     interval=300,
     color=base0D,
     # colorize=True,
@@ -62,6 +61,38 @@ status.register(
         units='metric',
     ),
 )
+
+# weather undergound but no UV
+# if ("WUNDERGROUND_API" in os.environ):
+#     from i3pystatus.weather import wunderground
+#     status.register(
+#         'weather',
+#         format='{condition} {current_temp}{temp_unit}[ {icon}] [ Hi: {high_temp}][ Lo: {low_temp}][ : {uv_index}]',
+#         interval=1800,
+#         color=base0D,
+#         # colorize=True,
+#         hints={'markup': 'pango'},
+#         backend=wunderground.Wunderground(
+#             api_key=os.environ["WUNDERGROUND_API"],
+#             location_code='pws:KILCHICA291',
+#             units='metric',
+#             forecast=True,
+#         ),
+#     )
+# else:
+#     from i3pystatus.weather import weathercom
+#     status.register(
+#         'weather',
+#         format='{condition} {current_temp}{temp_unit}[ {icon}] [ Hi: {high_temp}][ Lo: {low_temp}][ : {uv_index}]',
+#         interval=300,
+#         color=base0D,
+#         # colorize=True,
+#         hints={'markup': 'pango'},
+#         backend=weathercom.Weathercom(
+#             location_code='60637:4:US',
+#             units='metric',
+#         ),
+#     )
 
 # status.register("updates",
 #                 format="Updates: {count}",
