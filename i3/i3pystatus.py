@@ -51,7 +51,7 @@ status.register("clock",
 from i3pystatus.weather import weathercom
 status.register(
     'weather',
-    format='{condition} {current_temp}{temp_unit}[ {icon}] [ Hi: {high_temp}][ Lo: {low_temp}][  {uv_index}]',
+    format='{condition} {current_temp}{temp_unit}[ {icon}] [ Hi: {high_temp}][ Lo: {low_temp}][  {uv_index}]',
     interval=300,
     color=base0D,
     # colorize=True,
