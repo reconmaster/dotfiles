@@ -64,6 +64,9 @@
     # python
     ~/.coveragerc: python/coveragerc.conf
     ~/.noserc: python/noserc.conf
+    # ranger
+    ~/.config/ranger/rc.conf: ranger/rc.conf
+    ~/.config/ranger/scope.sh: ranger/scope.sh
     # tmux
     ~/.tmux.conf: tmux/tmux.conf
 

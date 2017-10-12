@@ -56,6 +56,9 @@ bindsym $mod+$sup+e exec emacsclient -c -a ""
 # navigation
 ###################################
 
+# disable focus with mouse
+focus_follows_mouse no
+
 # original change focus
 bindsym $sup+j focus left
 bindsym $sup+k focus down
