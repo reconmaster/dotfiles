@@ -10,8 +10,3 @@
 if [ -f ~/.bashrc_local ]; then
     source ~/.bashrc_local
 fi
-
-###################################
-# direnv
-###################################
-eval "$(direnv hook bash)"
