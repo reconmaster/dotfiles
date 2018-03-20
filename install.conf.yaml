@@ -45,9 +45,6 @@
     ~/bin/i3:
       force: true
       path: i3/i3.sh
-    ~/.config/i3/i3pystatus.py:
-      force: true
-      path: i3/i3pystatus.py
     ~/.config/i3/config.base:
       force: true
       path: i3/config
