@@ -12,7 +12,7 @@ print "Start each day with a problem to solve."
 # fi
 
 # need to run this to avoid ein errors with self-signed certs
-echo insecure > ~/.curlrc
+# echo insecure > ~/.curlrc
 
 ##################################
 # dotfiles-local
