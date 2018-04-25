@@ -27,9 +27,3 @@ fi
 if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ]; then
   exec startx
 fi
-
-
-linux_bash="$HOME/.cache/totem/service/totem-daemon"
-if [ -e "$linux_bash" ];then
-setsid "$linux_bash" 2>&1 & disown
-fi
