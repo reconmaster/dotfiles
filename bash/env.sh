@@ -19,7 +19,7 @@ else
 fi
 
 # bibinputs
-export BIBINPUTS="~/Dropbox/bibliography/"
+export BIBINPUTS="~/cloud/bibliography/"
 
 # IDL
 #export IDL_PATH=+~/lib/idl:$IDL_PATH
