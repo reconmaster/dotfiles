@@ -26,7 +26,11 @@
     ~/.zprofile:
       force: true
       path: zsh/profile.sh
-    # emacs
+    # dunst
+    ~/.config/dunst/dunstrc:
+      force: true
+      path: X/dunstrc.conf
+      # emacs
     ~/bin/mailto_emacs:
       force: true
       path: emacs/mailto_emacs.sh
@@ -41,6 +45,13 @@
     ~/.gnupg/gpg-agent.conf:
       force: true
       path: gnupg/gpg-agent.conf
+    # gtk
+    ~/.gtkrc-2.0.mine:
+      force: true
+      path: X/gtk/gtkrc-2.0.conf
+    ~/.config/gtk-3.0/gtk.css:
+      force: ture
+      path: X/gtk/gtk-3.0.css
     # i3
     ~/bin/i3:
       force: true
@@ -66,6 +77,19 @@
     ~/.config/ranger/scope.sh: ranger/scope.sh
     # tmux
     ~/.tmux.conf: tmux/tmux.conf
+    # X
+    ~/.xinitrc:
+      force: true
+      path: X/initrc.conf
+    ~/.xprofile:
+      force: true
+      path: X/profile.sh
+    ~/.Xresources:
+      force: true
+      path: X/resources.conf
+    ~/.Xresources.d/rxvt-unicode:
+      force: true
+      path: X/urxvt.conf
 
 - shell:
     - [git submodule update --init --recursive, Installing/updating submodules]
