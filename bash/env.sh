@@ -32,6 +32,9 @@ export MATLABPATH=$MATLABPATH:~/devel/matlab
 # Anaconda
 # export PATH=~/miniconda3/bin:"$PATH"
 
+# depot tools
+export PATH="${PATH}:/opt/depot_tools"
+
 # pdflatex
 export PDFLATEX="pdflatex --shell-escape"
 
