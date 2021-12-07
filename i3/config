@@ -36,7 +36,8 @@ floating_modifier $sup
 ###################################
 
 # start a terminal
-bindsym $sup+Return exec i3-sensible-terminal
+# bindsym $sup+Return exec i3-sensible-terminal urxvt
+bindsym $sup+Return exec urxvt
 
 # kill focused window
 bindsym $sup+Shift+q kill
@@ -357,7 +358,7 @@ exec --no-startup-id dunst
 exec --no-startup-id nm-applet
 
 # terminal
-exec --no-startup-id i3-msg 'workspace $workspace3; exec urxvt; workspace $workspace1'
+# exec --no-startup-id i3-msg 'workspace $workspace3; exec urxvt; workspace $workspace1'
 
 # emacs
 exec --no-startup-id i3-msg 'workspace $workspace2; exec  emacsclient -c -a ""; $workspace2'

@@ -117,3 +117,8 @@ export MAILDIR=~/.mail
 # music
 ###################################
 # export XDG_MUSIC_DIR=~/music
+
+###################################
+# i3 terminal
+###################################
+# export TERMINAL="urxvt"
